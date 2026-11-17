@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "LGTM Sticker",
+  "version": "1.0.0",
+  "description": "Fetches a random GIF from lgtmgifs.com and copies it to your clipboard as Markdown",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "LGTM Sticker: Copy a random GIF",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "clipboardWrite",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://lgtm-api.vercel.app/*"
+  ],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+L",
+        "mac": "Alt+Shift+L"
+      },
+      "description": "Copy a random GIF"
+    }
+  }
+}
